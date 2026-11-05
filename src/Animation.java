@@ -17,7 +17,7 @@ public class Animation extends JPanel implements Runnable
 
 	public void paint( Graphics window )
 	{
-		window.setColor(Color.WHITE);
+		window.setColor(Color.BLUE);
 
 		window.fillRect(0,0,1000,800);
 

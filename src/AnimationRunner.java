@@ -7,7 +7,7 @@ public class AnimationRunner extends JFrame
 
 	public AnimationRunner()
 	{
-		super("Animation Example!!");
+		super("TITLE HERE");
 
 		setSize(WIDTH,HEIGHT);
 		
