@@ -62,7 +62,7 @@ public class Brick extends Canvas
 		window.fillRect(getX(), getY(), getW(), getH());
 		window.setColor(Color.BLACK);
 		window.drawRect(getX(), getY(), getW(), getH());
-		*/
+		/*
 
 		//Find an Image for the Brick.
 		/*
