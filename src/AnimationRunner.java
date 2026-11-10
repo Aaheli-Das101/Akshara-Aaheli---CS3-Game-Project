@@ -2,8 +2,8 @@ import javax.swing.JFrame;
 
 public class AnimationRunner extends JFrame
 {
-	private static final int WIDTH = 1000;
-	private static final int HEIGHT = 800;
+	private static final int WIDTH = 5000;
+	private static final int HEIGHT = 1500;
 
 	public AnimationRunner()
 	{

@@ -82,6 +82,18 @@ public class Maze
 			}
 		}
 
+
+        public Tile[][] sendgrid() {
+            return grid;
+        }
+
+        public int sendrows(){
+            return rows;
+        }
+
+        public int sendcols(){
+            return cols;
+        }
 		//TEST IF IT ACTUALLY WORKS AND PRINTS OUT RIGHT!! DELETE LATER!!!!
 		public void printMaze() {
 
