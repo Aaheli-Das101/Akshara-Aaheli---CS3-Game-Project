@@ -8,7 +8,7 @@ import java.util.Random;
  *	Complete the Brick class.
  */
 
-public class Brick extends Canvas
+public class MazeGraphics extends Canvas
 {
 	//these are instance variables
     private int rows;
@@ -18,7 +18,7 @@ public class Brick extends Canvas
     private int[][] directions;
 
 	
-	public Brick()
+	public MazeGraphics()
 	{
         rows=10;
         cols = 10;
