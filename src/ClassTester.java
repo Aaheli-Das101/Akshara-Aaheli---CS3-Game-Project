@@ -9,7 +9,7 @@ public class ClassTester extends JPanel
     
     //THEN MOVE TO all STEP 2s
 
-    private Brick b;
+    private MazeGraphics m;
 
 
     //step 2 - define a Paddle
@@ -24,7 +24,7 @@ public class ClassTester extends JPanel
         setBackground(Color.WHITE);
 
 
-        b = new Brick();
+        m= new MazeGraphics();
 
 
         //step 2 - initialize - make a new Paddle
@@ -53,7 +53,8 @@ public class ClassTester extends JPanel
         window.drawString("Class Tester - test all classes here FIRST", 50, 30 );
         
 
-        b.paint(window);
+        m.paint(window);
+
 
 
         //step 2 - draw a Paddle - call Paddle's paint

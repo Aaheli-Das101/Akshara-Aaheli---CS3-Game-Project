@@ -79,7 +79,15 @@ public class MazeGraphics extends Canvas
 	public void paint( Graphics window )
 	{
         for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (grid[r][c].hasWall(Tile.topWall)) {
+                    window.setColor(Color.BLACK);
+                    window.drawRect(100, 100, 118, 62);}
 
+            }
+        }
+
+        for (int r = 0; r < rows; r++) {
             // Print top walls
             for (int c = 0; c < cols; c++) {
 
@@ -131,5 +139,5 @@ public class MazeGraphics extends Canvas
             }
         }
         System.out.println("+");
-	}
+}
 }
