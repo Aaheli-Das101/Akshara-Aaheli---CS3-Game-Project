@@ -11,11 +11,11 @@ import java.util.Random;
 public class Brick extends Canvas
 {
 	//these are instance variables
-    private int rows;
-    private int cols;
-    private Tile[][] grid;
-    private Random rand;
-    private int[][] directions;
+    private int rows; //size of the maze
+    private int cols; //size of the maze
+    private Tile[][] grid; //maze tiles (paths, open spaces, and walls)
+    private Random rand; //randomizer seed - more stable and predictable like using a seed in Cdf
+    private int[][] directions; //randomize directions to go
 
 	
 	public Brick()

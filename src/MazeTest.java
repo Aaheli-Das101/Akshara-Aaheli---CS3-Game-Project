@@ -1,4 +1,5 @@
-    public class MazeTest {
+//TEMP CLASS TO SEE MAZE PRINTED VISUALIZED
+public class MazeTest {
 
         public static void main(String[] args) {
 

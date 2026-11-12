@@ -94,7 +94,9 @@ public class Maze
         public int sendcols(){
             return cols;
         }
-		//TEST IF IT ACTUALLY WORKS AND PRINTS OUT RIGHT!! DELETE LATER!!!!
+
+
+		//TEST IF IT ACTUALLY WORKS AND PRINTS OUT A MAZE!!
 		public void printMaze() {
 
 			for (int r = 0; r < rows; r++) {
