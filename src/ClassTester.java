@@ -9,7 +9,7 @@ public class ClassTester extends JPanel
     
     //THEN MOVE TO all STEP 2s
 
-    //step 1 - define a Brick
+    private Brick b;
 
 
     //step 2 - define a Paddle
@@ -24,7 +24,7 @@ public class ClassTester extends JPanel
         setBackground(Color.WHITE);
 
 
-        //step 1 - initialize - make a new Brick
+        b = new Brick();
 
 
         //step 2 - initialize - make a new Paddle
@@ -53,7 +53,7 @@ public class ClassTester extends JPanel
         window.drawString("Class Tester - test all classes here FIRST", 50, 30 );
         
 
-        //step 1 - draw a Brick - call Brick's paint
+        b.paint(window);
 
 
         //step 2 - draw a Paddle - call Paddle's paint
