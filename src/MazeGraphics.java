@@ -17,8 +17,8 @@ public class MazeGraphics extends Canvas
 	
 	public MazeGraphics()
 	{
-        rows=10;
-        cols = 10;
+        rows= 20;
+        cols = 20;
 
         grid = new Tile[rows][cols];
 
@@ -78,6 +78,8 @@ public class MazeGraphics extends Canvas
 	//code to draw the Brick will go here
 	public void paint( Graphics window )
 	{
+        int x = 100;
+        int y = 100;
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
                 if (grid[r][c].hasWall(Tile.topWall)) {
@@ -92,14 +94,15 @@ public class MazeGraphics extends Canvas
             for (int c = 0; c < cols; c++) {
 
                 if (grid[r][c].hasWall(Tile.topWall)) {
-                    System.out.print("+---");
+                    window.setColor(Color.CYAN);
+                    window.fillRect(x, y, 118, 62);
                 }
                 else {
-                    System.out.print("+   ");
+                    window.setColor(Color.WHITE);
+                    window.fillRect(x, y, 118, 62);
                 }
+                if (x < (2560-100)) x += 118;
             }
-
-            System.out.println("+");
 
             // Print left and right walls
             for (int c = 0; c < cols; c++) {
