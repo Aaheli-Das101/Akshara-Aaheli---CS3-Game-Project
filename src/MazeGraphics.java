@@ -4,9 +4,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
-/*
- *	Complete the Brick class.
- */
 
 public class MazeGraphics extends Canvas
 {
