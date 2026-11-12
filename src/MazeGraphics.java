@@ -4,11 +4,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
 
-/*
- *	Complete the Brick class.
- */
 
-public class Brick extends Canvas
+public class MazeGraphics extends Canvas
 {
 	//these are instance variables
     private int rows; //size of the maze
@@ -18,10 +15,10 @@ public class Brick extends Canvas
     private int[][] directions; //randomize directions to go
 
 	
-	public Brick()
+	public MazeGraphics()
 	{
-        rows=10;
-        cols = 10;
+        rows= 20;
+        cols = 20;
 
         grid = new Tile[rows][cols];
 
@@ -81,20 +78,31 @@ public class Brick extends Canvas
 	//code to draw the Brick will go here
 	public void paint( Graphics window )
 	{
+        int x = 100;
+        int y = 100;
         for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < cols; c++) {
+                if (grid[r][c].hasWall(Tile.topWall)) {
+                    window.setColor(Color.BLACK);
+                    window.drawRect(100, 100, 118, 62);}
 
+            }
+        }
+
+        for (int r = 0; r < rows; r++) {
             // Print top walls
             for (int c = 0; c < cols; c++) {
 
                 if (grid[r][c].hasWall(Tile.topWall)) {
-                    System.out.print("+---");
+                    window.setColor(Color.CYAN);
+                    window.fillRect(x, y, 118, 62);
                 }
                 else {
-                    System.out.print("+   ");
+                    window.setColor(Color.WHITE);
+                    window.fillRect(x, y, 118, 62);
                 }
+                if (x < (2560-100)) x += 118;
             }
-
-            System.out.println("+");
 
             // Print left and right walls
             for (int c = 0; c < cols; c++) {
@@ -134,5 +142,5 @@ public class Brick extends Canvas
             }
         }
         System.out.println("+");
-	}
+}
 }
