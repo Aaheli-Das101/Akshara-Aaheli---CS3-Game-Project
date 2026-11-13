@@ -7,13 +7,13 @@ class BreakOutRunner extends JFrame
 
 	public BreakOutRunner()
 	{
-		super("Brick Breaker BreakOut");
+		super("Platformer Game <3");
 
 		setSize(WIDTH,HEIGHT);
 
 		//use the ClassTester to test your classes
 		//before you start to write the full game
-		getContentPane().add( new ClassTester() );
+		getContentPane().add( new MazeGraphics() );
 
 		//uncomment this when ready to start
 		//building the game
