@@ -21,8 +21,8 @@ public class MazeGraphics extends Canvas
 	public MazeGraphics()
 	{
         //change however needed. Adding rows = affect vertical span, adding cols = affect horizontal span
-        rows= 15;
-        cols = 60;
+        rows= 50;
+        cols = 90;
 
         grid = new Tile[rows][cols];
 
@@ -87,9 +87,9 @@ public class MazeGraphics extends Canvas
 	{
         generate();
         //get size of the tile we have to work with
-        int avilableWidth = getWidth() - 2 * startX;
-        int avilableHeight = getHeight() - 2 * startY;
-        size = Math.min(avilableWidth / cols, avilableHeight / rows); //space available even with margin
+        int avilableWidth = (getWidth() - 2 * startX);
+        int avilableHeight = (getHeight() - 2 * startY);
+        size = Math.min(avilableWidth / (cols), avilableHeight / (rows)); //space available even with margin
 
         //background
         window.setColor(Color.black);
@@ -101,6 +101,7 @@ public class MazeGraphics extends Canvas
             for (int c = 0; c < cols; c++) {
                 int x = startX + c * size; //moving left and right and ensuring that it actually moves
                 int y = startY + r * size; //moving up and down
+                int tileSize = 4;
 
 
                 //if beginning at index 0 (top and left) no size added. right + bottom have size added to access the very bottom lien
@@ -109,18 +110,18 @@ public class MazeGraphics extends Canvas
                 //size + 4 = 2px before cell + size cell + 2 px after cell
                 //adjusted what gets moved around the most as per the wall locations
                 if (grid[r][c].hasWall(Tile.topWall)) {
-                    window.fillRect(x - 2, y - 2, size + 4, 4);
+                    window.fillRect(x - tileSize / 2, y - tileSize / 2, size + tileSize,  tileSize);
                 }
 
                 if (grid[r][c].hasWall(Tile.bottomWall)) {
-                    window.fillRect(x - 2, y + size - 2, size + 4, 4);
+                    window.fillRect(x - tileSize / 2, y + size - tileSize / 2, size + tileSize, tileSize / 2);
                 }
 
                 if (grid[r][c].hasWall(Tile.rightWall)) {
-                    window.fillRect(x + size - 4, y - 4, 4, size + 4);
+                    window.fillRect(x + size - tileSize, y - tileSize, tileSize, size + tileSize);
                 }
                 if (grid[r][c].hasWall(Tile.leftWall)) {
-                    window.fillRect(x - 2, y - 2, 4, size + 4);
+                    window.fillRect(x - tileSize / 2, y - tileSize / 2, tileSize, size + tileSize);
                 }
 
             }
@@ -133,74 +134,5 @@ public class MazeGraphics extends Canvas
         window.setColor(Color.red);
         window.setFont(new Font("Comic Sans", Font.BOLD, 20));
         window.drawString("E", (startX + (cols -1) * size) + size/2 - 6, (startY + (rows-1) * size) + size/2 + 7);
-
-
-
-//        int x = 100;
-//        int y = 100;
-//        for (int r = 0; r < rows; r++) {
-//            for (int c = 0; c < cols; c++) {
-//                if (grid[r][c].hasWall(Tile.topWall)) {
-//                    window.setColor(Color.BLACK);
-//                    window.drawRect(100, 100, 118, 62);}
-//
-//            }
-//        }
-//
-//        for (int r = 0; r < rows; r++) {
-//            // Print top walls
-//            for (int c = 0; c < cols; c++) {
-//
-//                if (grid[r][c].hasWall(Tile.topWall)) {
-//                    window.setColor(Color.CYAN);
-//                    window.fillRect(x, y, 118, 62);
-//                }
-//                else {
-//                    window.setColor(Color.WHITE);
-//                    window.fillRect(x, y, 118, 62);
-//                }
-//                if (x < (2560-100)) x += 118;
-//            }
-//
-//            // Print left and right walls
-//            for (int c = 0; c < cols; c++) {
-//
-//                if (grid[r][c].hasWall(Tile.leftWall)) {
-//                    System.out.print("|");
-//                }
-//                else {
-//                    System.out.print(" ");
-//                }
-//
-//                if (r == 0 && c == 0) {
-//                    System.out.print(" S ");
-//                }
-//                else if (r == rows - 1 && c == cols - 1) {
-//                    System.out.print(" E ");
-//                }
-//                else {
-//                    System.out.print("   ");
-//                }
-//            }
-//            // Print the rightmost wall
-//            if (grid[r][cols - 1].hasWall(Tile.rightWall)) {
-//                System.out.println("|");
-//            }
-//            else {
-//                System.out.println(" ");
-//            }
-//        }
-//        // Print the bottom walls
-//        for (int c = 0; c < cols; c++) {
-//            if (grid[rows - 1][c].hasWall(Tile.bottomWall)) {
-//                System.out.print("+---");
-//            }
-//            else {
-//                System.out.print("+   ");
-//            }
-//        }
-//        System.out.println("+");
-
-
 }
 }
