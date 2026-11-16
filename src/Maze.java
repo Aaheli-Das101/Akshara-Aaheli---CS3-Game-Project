@@ -83,7 +83,7 @@ public class Maze
 		}
 
 
-        public Tile[][] sendgrid() {
+        public Tile[][] getGrid() {
             return grid;
         }
 
