@@ -87,6 +87,7 @@ public class MazeGraphics extends Canvas
 
         window.setColor(Color.red);
         window.setFont(new Font("Comic Sans", Font.BOLD, 20));
-        window.drawString("E", (startX + (cols -1) * size) + size/2 - 6, (startY + (rows-1) * size) + size/2 + 7);
+        window.drawString("E", (startX + (cols -1) * size) + size / 2 + 6, (startY + (rows-1) * size) + size/2 -7);
+//        window.fillRect(, , size, size); //DOOR WAY TO BE ADDED
 }
 }
