@@ -18,7 +18,7 @@ public class MazeGraphics extends Canvas
 	
 	public MazeGraphics()
 	{
-        size = 70; //pixels per tile
+        size = 95; //pixels per tile
         maze = null;
         rows = 0;
         cols = 0;
