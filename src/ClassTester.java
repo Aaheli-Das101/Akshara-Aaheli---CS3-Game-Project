@@ -56,7 +56,6 @@ public class ClassTester extends JPanel
         m.paint(window);
 
 
-
         //step 2 - draw a Paddle - call Paddle's paint
 
 
